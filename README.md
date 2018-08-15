@@ -16,4 +16,7 @@ Si tienes algun comentario o sugerencia porfavor abre un issue [aqui](https://gi
 
 ------
 
+```
+c = a + b
 
+```
