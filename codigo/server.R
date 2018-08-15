@@ -27,8 +27,7 @@ Index <- function(read,verbatim, dictionary) {
     IndexText[[i]] <- stringr::str_sub(iconv(enc2utf8(read),sub="byte"),verbatim$offsetstart[i]-50,verbatim$offsetend[i]+250)
     
   }
-  matches <- c()
-  ToMatch <- c()
+
   for ( i in 1:length(IndexText)){
     matches[[i]] <- grepl(paste(dictionary$term, collapse = "|"),IndexText[i])
   }
@@ -55,14 +54,7 @@ Index <- function(read,verbatim, dictionary) {
     table(sciname,dnn = "Count")[order(table(sciname), decreasing = T)]
     
   })
-  
-# Tab to show the dictionary
-    output$dictionary <- renderTable({
-      # Read the dictionary
-      dictio <- read.csv(input$dictionary, header = TRUE)
-      
-
-    })
+#BORRRE LAS LINEAS ANTRIORES POR FALTA EXPLICACIÓN
     
 # Tab to show the indexed results
 
